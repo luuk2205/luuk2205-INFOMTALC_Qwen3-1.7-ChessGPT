@@ -51,7 +51,9 @@ class TransformerPlayer(Player):
         verbose_tactics=False,
         use_scholars_mate=True,
     ):
-        super().__init__(name)
+        name_safe = name or "Luuk_Kwee_7532784"
+        super().__init__(name_safe)
+        self.name = name_safe
 
         self.tries = tries
         self.verbose_tactics = verbose_tactics
